@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="utf-8">
+   <meta name="keywords" content="Boda,boda,2023,Atlixco,atlixco,invitacion,Invitacion,digital,Digital">
+   <meta name="Invitacion Boda" content="Los esperamos en este dia especial">
+   <meta name="author" content="Red">
+   <meta name="copyright" content="reddigitalcreations.com">
+   <meta name="robots" content="index">
+   <link rel="icon" href="multimedia/images/jesus-y-abril.ico">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <link rel="stylesheet" type="text/css" href="css/css_index_estilo.css">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" href="css/icofont.min.css">
+   <link rel="stylesheet" href="css/splide.min.css">
+   <link rel="stylesheet" href="css/splide-core.min.css">
+   <link rel="stylesheet" href="css/themes/splide-default.min.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="js/splide.min.js"></script>
+   <script src="https://kit.fontawesome.com/28faa9840b.js" crossorigin="anonymous"></script>
+    <title>Invitacion</title>
+</head>
+<body class="body " >
+   <div class="loader-container"> 
+      <div class="anim-loader-container">
+        <div class="loading">
+          <div class="balls"></div>
+          <div class="balls"></div>
+          <div class="balls"></div>
+          <span class="texto-cargando">Cargando...</span>
+       </div>
+      </div>
+   </div>
+   <div class="show-invit-container" >
+      <h2 class="show-invit">Ver invitación</h2>
+      <div class="show-invit-anim"></div>
+      <img class="show-invit-anim-1" src="multimedia/images/back-1.png" alt="back-1">
+      <img class="show-invit-anim-2" src="multimedia/images/back-2.png" alt="back-2">
+   </div>
+   <span class="modal off" hidden="true">
+      <span class="modal-img off-1">
+         <img src="" class="modal-img-front">
+         <img src="multimedia/images/icons/close.svg" class="close__image-icon">
+      </span>
+   </span>
+   <span class="modal-2 off" hidden="true">
+      <span class="modal-gift off-2">
+         <span class="data-info gift-info ">
+         </span>
+      </span>
+   </span>
+   <span class="modal-3 off" hidden="true">
+      <span class="modal-confirm off-2">
+         <span class="data-info-2 confirm-info ">
+            <h3 class="title-gift-modal">Confirmar Asistencia</h3>
+            <h3 class="nombre-asistencia"></h3>
+            <div class="confirmar-familia"></div>
+            <form class="form-invitation">
+               <input type="text" id="number-input" class="invitation-number" required>
+               <label class="lbl-text">
+                  <span class="text-input">Número de invitacion</span>
+               </label>
+               <input type="submit" name="">
+            </form>
+            <div class="container__qr-generator ">
+               <div id="qr-container" class="qr-container "></div>
+            </div>
+            <span class="text-qr "><p></p></span>
+            <button class="btn-send">Confirmar</button>
+            <h5 class="title-gift-modal">Recuerda presentar este QR en la recepcion</h5>
+         </span>
+      </span>
+   </span>
+   <span class="music-control">
+      <span class="music-container">
+         <i class="music-off play fa-solid fa-volume-xmark"></i>
+         <i class="music-on fa-solid fa-volume-low"></i>
+         <audio loop class="audio">
+           <source src="multimedia/audio/track.mp3" type="audio/mpeg">
+         </audio>
+         <audio loop class="audio-2">
+           <source src="multimedia/audio/115.mp3" type="audio/mpeg">
+         </audio>
+      </span><span></span>
+   </span>
+   <header>
+      <div class="div__menu-container">
+            <div class="menu__container">
+               <span class="i__open i__menu"><img src="multimedia/images/icons/menu.svg" class="nav__icon"></span>
+               <span href="#" class="i__close i__menu"><img src="multimedia/images/icons/close.svg" class="nav__icon"></span>
+            </div>
+
+
+            <nav class="nav__container ">
+               <div class="nav__menu-container">
+                  <div class="i__moon i__container">
+                     <i class="fa-solid fa-moon dark-icon"></i>
+                  </div>
+
+                  <div class="i__sun i__container">
+                     <i class="fa-solid fa-sun dark-icon"></i>
+                      <span class="dark-mode-animation"></span>
+                  </div>
+
+                  <ul class="nav__ul">
+                        <li class="nav__li "><a href="#Presentacion" class="nav__a"><i class="fas fa-envelope"></i> Presentacion</a></li>
+                        <li class="nav__li "><a href="#Lugar" class="nav__a"><i class="fas fa-house"></i> Lugar</a></li>
+                        <li class="nav__li "><a href="#Galeria" class="nav__a"><i class="fas fa-photo-film"></i> Galeria</a></li>
+                        <li class="nav__li "><a href="#Programa"  class="nav__a"><i class="fas fa-calendar-days"></i> Programa</a></li>
+                        <li class="nav__li "><a href="#Mesa-de-regalos" class="nav__a"><i class="fas fa-gift"></i> Mesa de Regalos</a></li>
+                        <li class="nav__li "><a href="#Asistencia" class="nav__a"><i class="fas fa-qrcode"></i> Asistencia</a></li>
+                        <span></span>
+                  </ul>
+               </div>
+            </nav> 
+         </div>
+   </header>
+   <section id="Presentacion">
+      <div class="main__container">
+         <div class="div__container">
+            <h1 class="title__info">Luis y Dana
+            </h1>
+            <div class="front__container-image">
+               <img src="multimedia/images/Front-image-1.png" class="front-img">
+            </div>
+            <h2 class="title-date">---- 7 DE DICIEMBRE ----</h2>
+            <div class="text__container">
+               <p class="text" data-aos="fade-right">
+                  Tú vales la pena, la alegría, la espera, la distancia, los momentos difíciles, las lágrimas, las risas, tú lo vales todo para mí.
+                  <!-- Habría preferido superar a otros en el conocimiento de lo que es excelente, que en la medida de mi poder y dominio. -->
+               </p>
+            </div>
+            <div class="countdown"></div>
+            <div class="agendar__container">
+               <button id="agendarBtn" class="btn-agendar">Agendar Evento</button>
+            </div>
+            <h2>Nuestra canción</h2>
+            <div class="spotify-song-container">
+               <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6lanRgr6wXibZr8KgzXxBl?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+               <!-- background__image -->
+               <div class="background__image-test">
+                  <img src="multimedia/images/gallery-image/transition/1.png" alt="">
+               </div>
+         </div>
+      </div>
+   </section>
+   <section>
+      <div class="main__container">
+         <div class="div__container">
+            <div class="text__container">
+               <p class="text " data-aos="fade-left">
+                  "El cantar de los cantares 8:6 : Ponme como un sello sobre tu corazón, como un sello sobre tu brazo por qué el amor están fuerte."
+               </p>
+            </div>
+            <h2 class="title__info">Disfruten el evento</h2>
+            <div class="background__container-image">
+               <div class="background__image-test">
+                  <img src="multimedia/images/gallery-image/transition/2.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="Lugar">
+      <div class="main__container">
+         <div class="div__container lugar-grid">
+            <h2 class="title__horario-lugar">Horario & lugar</h2>
+            <div class="text__container-3 inicio-grid">
+               <h2 class="title__border-h2">Discurso </h2>
+               <p class="text">
+                  Salón Del Reino De Los Testigos De Jehova.
+                  <br>Prol. Independencia, El Pedregal, 74295 Atlixco, Pue.
+                  <br>
+               </p>
+                  <h4>Inicio :</h4>
+               <p class="text">
+                  <br>
+                  12:00 pm
+                  <br>
+                  <br>
+               </p>
+                <a class="btn-discurso" href="https://maps.app.goo.gl/EFR9C8vCspE9AH3W6" target="_BLANK">
+                     Ver Ubicación
+                  </a>
+                  <div class="map-transition ">
+                     <div class="map-container">
+                        <iframe class="map-info" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.953235200847!2d-98.43822639999999!3d18.8891557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb39d2e2103ff%3A0x4adb2bdcb962d748!2sSal%C3%B3n%20del%20Reino%20de%20los%20Testigos%20de%20Jehov%C3%A1!5e0!3m2!1ses-419!2smx!4v1724962399898!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+                  <button class="btn-mapa si" >
+                     Mapa
+                  </button>
+            </div>
+                  
+           
+            <div class="text__container-3 banquete-grid">
+            <h2 class="title__border-h2 title__banquete">Recepción </h2>
+               <p class="text">
+                  Salón Social Los Ahuehuetes
+                  <br>
+                  <br>
+               </p>
+                  <h4>Inicio :</h4>
+               <p class="text">
+                  <br>
+                  2:00 pm
+                  <br>
+                  <br>
+               </p>
+                  <a class="btn-discurso" href="https://g.page/LosAhuehuetes?share" target="_BLANK">
+                     Ver Ubicacion
+                  </a>
+                  <div class="map-transition2 ">
+                     <div class="map-container">
+                           <iframe class="map-info" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.312876655506!2d-98.4339134!3d18.9175404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb464408e012f%3A0x50066110c3489b4!2sSal%C3%B3n%20Social%20Los%20Ahuehuetes!5e0!3m2!1ses-419!2smx!4v1668742454908!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                  </div>
+                  <button class="btn-mapa si2" >
+                     Mapa
+                  </button>
+            </div>
+            <div class="text__container">
+               <p class="text" data-aos="fade-right">
+                  Génesis 2:18 Entonces Jehová Dios dijo: “No es bueno que el hombre siga solo. Voy a hacerle una ayudante que lo complemente”
+               </p>
+            </div>
+            <div class="background__image-test">
+               <img src="multimedia/images/gallery-image/transition/3.png" alt="">
+            </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section>
+      <div class="main__container hover">
+         <div class="div__container">
+            <h2 class="title__border-h2">Vestimenta</h2>
+            <h4 class="title-formal">Formal</h4>
+            <div class="img__container" data-aos="fade-up">
+               <img class="img-border img-outfit" src="https://wol.jw.org/es/wol/mp/r4/lp-s/ws16/2016/537">
+            </div>
+            <div class="img__container" data-aos="fade-up" data-aos-delay="250">
+               <img class="img-border img-outfit" src="https://wol.jw.org/es/wol/mp/r4/lp-s/mwb19/2019/931">
+            </div>
+            <div class="background__image-test">
+               <img src="multimedia/images/gallery-image/transition/4.png" alt="">
+            </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="Programa">
+      <div class="main__container hover">
+         <div class="div__container">
+            <h2>Programa</h2>
+
+            <div class="timeline__container">
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-1"></span>
+                  <i class="icofont-ui-home timeline-i" data-aos="fade-right" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-right">
+                  <br>
+                  Discurso
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-2"></span>
+                  <i class="icofont-list timeline-i"data-aos="fade-left" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-left">
+                  <br>
+                  Recepción
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-3"></span>
+                  <i class="icofont-restaurant timeline-i"data-aos="fade-right" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-right">
+                  <br>
+                  Alimentos
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-4"></span>
+                  <i class="icofont-camera timeline-i"data-aos="fade-left" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-left">
+                  <br>
+                  Fotos y entrega de regalos
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-5"></span>
+                  <i class="icofont-retro-music-disk timeline-i"data-aos="fade-right" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-right">
+                  <br>
+                  Vals de los novios
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-8"></span>
+                  <i class="icofont-layered-cake timeline-i"data-aos="fade-left" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-left">
+                  <br>
+                  Pastel
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-6"></span>
+                  <i class="icofont-music-notes timeline-i"data-aos="fade-left" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-left">
+                  <br>
+                  Inicio del baile
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-7"></span>
+                  <i class="icofont-candy timeline-i"data-aos="fade-right" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-right">
+                  <br>
+                  Mesa de dulces
+                  <br>
+                  <br>
+                  <br>
+               </p>
+               <div class="timeline__container-i">
+                  <span class="timeline-badge badge-9"></span>
+                  <i class="icofont-logout timeline-i"data-aos="fade-right" data-aos-duration="1800"></i>
+               </div>
+               <p class="text" data-aos="fade-right">
+                  <br>
+                  Palabras de los novios y oración final
+                  <br>
+                  <br>
+                  <br>
+               </p>
+            </div>
+   </section>
+   <section id="Mesa-de-regalos">
+      <div class="main__container">
+         <div class="background__container-image">
+            <div class="background__image-test">
+               <img src="multimedia/images/gallery-image/transition/5.png" alt="">
+            </div>
+         </div>
+         <div class="div__container">
+            <h1 class="">Mesa de regalos</h1>
+            <div class="text__container">
+               <p class="text" data-aos="fade-left">
+                  Gracias por ser parte del día más importante de nuestras vidas, esperemos y nunca lo olvides asi como nunca los olvidaremos a ustedes.
+               </p>
+            </div>
+            <div class="gift__container">
+               <i class="fa-brands fa-cc-visa gift-i"></i>
+               <button class="btn-gift c-visa" data-aos="fade-right" data-aos-duration="1600">Regalar</button>
+            </div>
+            <div class="gift__container" hidden>
+               <i class="fa-brands fa-cc-paypal gift-i"></i>
+               <button class="btn-gift c-paypal" data-aos="fade-left" data-aos-duration="1600">Regalar</button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="Asistencia">
+      <div class="main__container">
+         <div class="background__image-test">
+            <img src="multimedia/images/gallery-image/transition/6.png" alt="">
+         </div>
+         <div class="div__container">
+            <h1 class="">Asistencia</h1>
+            <div class="text__container">
+               <p class="text" data-aos="fade-left">
+                  ¡No sabes que felices estaremos cuando comencemos nuestra historia juntos, pero tú presencia lo hará más bonito y especial para nosotros, porque, una de las muchas razones de que será inolvidable, eres tú!
+               </p>
+            </div>
+            <div class="confirm__container">
+               <button class="btn-confirm " data-aos="fade-up" data-aos-duration="1600">Confirmar Asistencia</button>
+            </div>
+         </div>
+      </div>
+      <div class="background__image-test">
+         <img src="multimedia/images/gallery-image/transition/7.png" alt="">
+      </div>
+   </section>
+      <h2 class="gallery-title">Galería</h2>
+   <section class="splide carousel" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+          <ul class="splide__list">
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-1.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-2.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-3.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-4.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-5.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-6.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-7.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-8.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-9.jpg" alt="">
+             </li>
+             <li class="splide__slide">
+               <img class="img-slide img-gallery" src="multimedia/images/gallery-image/img-10.jpg" alt="">
+             </li>
+          </ul>
+      </div>
+    </section>
+    <div class="text__container">
+      <p class="text" data-aos="fade-right">
+         “Cuando te das cuenta de que quieres pasar el resto de tu vida con alguien, deseas que el resto de tu vida comience cuánto antes”
+      </p>
+   </div>
+    <div class="background__image-test">
+       <img src="multimedia/images/gallery-image/transition/8.png" alt="">
+    </div>
+    <footer class="footer">
+      <a href="#" class="a-inv-click" target="_blank"><h5 class="title-footer">Diseñado por <b>Invita Click</b></h5></a>
+      <button class="btn-contact-me">Contactar</button>
+   </footer>
+<!----======== JS ======== -->
+   <!-- <script type="text/JavaScript">
+     function submitForm(event){
+       event.preventDefault();
+       window.history.back();
+     } -->
+       <script>
+         var splide = new Splide( '.splide', {
+            type   : 'loop',
+            padding: '0rem',
+           autoplay: true,
+         } );
+         
+         splide.mount();
+       </script>
+</script>
+   <script src="js/dark-mode__script.js"></script>
+   <script src="js/menu__script.js"></script>
+   <script src="js/simplyCountdown.min.js"></script>
+   <script src="js/countdown.js"></script>
+   <script src="js/gallery__script.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+   <script src="js/gift__script.js?v=6"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <!-- <script src="js/anime.min.js"></script>
+   <script src="js/animate__script.js"></script> -->
+   <script>
+      AOS.init({
+         duration: 800
+      });
+   </script>
+<!----======== JS ======== --> 
+</body>
+</html>
